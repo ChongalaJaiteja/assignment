@@ -14,7 +14,11 @@ class Shows extends Component {
     this.getShows()
   }
 
-  renderGenreSections = filteredShowsList => {
+  renderGenreSections = () => {
+    const {showsList, searchInput} = this.state
+    const filteredShowsList = showsList.filter(eachShow =>
+      eachShow.show.name.toLowerCase().includes(searchInput.toLowerCase()),
+    )
     const uniqueGenres = new Set()
 
     filteredShowsList.forEach(eachShow => {
@@ -57,10 +61,8 @@ class Shows extends Component {
   }
 
   render() {
-    const {isLoading, searchInput, showsList} = this.state
-    const filteredShowsList = showsList.filter(eachShow =>
-      eachShow.show.name.toLowerCase().includes(searchInput.toLowerCase()),
-    )
+    const {isLoading, searchInput} = this.state
+
     return (
       <div className="bg-container">
         <nav>
@@ -76,7 +78,7 @@ class Shows extends Component {
           {isLoading ? (
             <ClipLoader color="#36d7b7" />
           ) : (
-            <>{this.renderGenreSections(filteredShowsList)}</>
+            <>{this.renderGenreSections()}</>
           )}
         </div>
       </div>

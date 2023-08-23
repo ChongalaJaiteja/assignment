@@ -3,8 +3,6 @@ import './index.css'
 
 const GenreSection = props => {
   const {genre, showsList} = props
-  console.log(genre)
-  console.log(showsList)
   return (
     <div className="genre-section-bg-container">
       <h1 className="gener-heading">{genre}</h1>

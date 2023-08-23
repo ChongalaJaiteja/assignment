@@ -1,0 +1,56 @@
+.user-details-container {
+  min-height: 100vh;
+  font-family: 'Bree Serif';
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+}
+
+form {
+  border: 1px solid #bfbfbfbf;
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  border-radius: 10px;
+  width: min(90%, 27rem);
+}
+label {
+  font-size: clamp(0.8rem, 1vw + 0.2rem, 1.1rem);
+  margin-bottom: 0.5em;
+}
+input {
+  margin-bottom: 1em;
+  border: 1px solid #bfbfbfbf;
+  border-radius: 5px;
+  padding: 0.6em 1em;
+  margin-top: 0.16em;
+  outline: none;
+}
+.save-btn {
+  align-self: center;
+  background-color: #217feb;
+  border: none;
+  padding: 0.7em 1.3em;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+.login-user-img {
+  width: min(85%, 25rem);
+}
+.user-details-heading {
+  font-size: clamp(1rem, 1vw + 1rem, 1.5rem);
+  padding-bottom: 0.5em;
+  text-align: center;
+  border-bottom: 1px solid #bfbfbfbf;
+}
+
+@media (min-width: 690px) {
+  .user-details-container {
+    flex-direction: row;
+    gap: 1em;
+    justify-content: space-around;
+  }
+}

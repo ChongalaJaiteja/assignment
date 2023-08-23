@@ -1,6 +1,5 @@
 .genre-section-bg-container {
-  margin-block: 1em;
-  outline: auto;
+  margin-block: 0.5em;
   width: 100%;
 }
 .genre-shows-list-container {

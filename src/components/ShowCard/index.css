@@ -1,5 +1,49 @@
 .show-card {
+  flex: 0 1 calc(100% - 1em);
   display: flex;
   flex-direction: column;
   justify-content: center;
+  border: 1px solid #bfbfbfbf;
+  border-radius: 10px;
+  overflow: hidden;
+  max-width: 15rem;
+  transition: transform 0.3s ease-in;
+}
+.no-img {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.show-card:hover {
+  transform: scale(1.02);
+}
+.show-card-content {
+  width: 100%;
+  text-align: center;
+  padding-bottom: 0.9em;
+}
+.show-image {
+  width: 100%;
+}
+.watch-btn {
+  align-self: center;
+  background-color: #217feb;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5em 1.2em;
+  cursor: pointer;
+}
+
+@media (min-width: 459px) {
+  .show-card {
+    flex: 0 1 calc(50% - 1em);
+  }
+}
+
+@media (min-width: 700px) {
+  .show-card {
+    flex: 0 1 calc(33% - 1em);
+  }
 }
