@@ -1,0 +1,15 @@
+.genre-section-bg-container {
+  margin-block: 1em;
+  outline: auto;
+  width: 100%;
+}
+.genre-shows-list-container {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+.gener-heading {
+  font-size: clamp(1rem, 1vw + 1rem, 1.7rem);
+}
