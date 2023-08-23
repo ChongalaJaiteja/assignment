@@ -3,7 +3,8 @@ import './index.css'
 
 const ShowCard = props => {
   const {showDetails} = props
-  const {id, name, image} = showDetails
+  const {id, name, image, rating} = showDetails
+  const {average} = rating
   const showImage = image && image.original && image.medium ? image.medium : ''
   return (
     <li className="show-card">
@@ -13,7 +14,8 @@ const ShowCard = props => {
         <p className="no-img">No Image</p>
       )}
       <div className="show-card-content">
-        <p>{name}</p>
+        <p className="show-card-name">{name}</p>
+        {average && <p className="rating">{average}</p>}
         <Link to={`/showDetails/${id}`}>
           <button type="button" className="watch-btn">
             Watch

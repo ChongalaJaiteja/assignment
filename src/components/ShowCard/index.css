@@ -2,12 +2,25 @@
   flex: 0 1 calc(100% - 1em);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   border: 1px solid #bfbfbfbf;
   border-radius: 10px;
   overflow: hidden;
-  max-width: 15rem;
-  transition: transform 0.3s ease-in;
+  max-width: 18rem;
+  transition: transform 0.2s ease-in;
+  box-shadow: 5px 5px 5px #bfbfbfbf;
+  position: relative;
+}
+.rating {
+  position: absolute;
+  color: red;
+  right: 3%;
+  top: 0;
+  background-color: gold;
+  padding: 0.5em 0.6em;
+  border-radius: 100%;
+  color: white;
+  font-size: clamp(0.3rem, 1vw + 1rem, 1rem);
 }
 .no-img {
   flex-grow: 1;
@@ -35,8 +48,16 @@
   padding: 0.5em 1.2em;
   cursor: pointer;
 }
+.watch-btn:hover {
+  background-color: white;
+  border: 1px solid #217feb;
+  color: black;
+}
+.show-card-name {
+  font-size: clamp(1rem, 1vw + 0.8rem, 1.4rem);
+}
 
-@media (min-width: 459px) {
+@media (min-width: 450px) {
   .show-card {
     flex: 0 1 calc(50% - 1em);
   }

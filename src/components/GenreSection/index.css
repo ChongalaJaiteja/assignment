@@ -12,3 +12,9 @@
 .gener-heading {
   font-size: clamp(1rem, 1vw + 1rem, 1.7rem);
 }
+
+@media (min-width: 600px) {
+  .genre-shows-list-container {
+    gap: 3em;
+  }
+}
