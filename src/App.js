@@ -8,7 +8,7 @@ import './App.css'
 const App = () => (
   <BrowserRouter>
     <Switch>
-      <Route exact path="/userDetails" component={UserDetails} />
+      <Route exact path="/" component={UserDetails} />
       <Route exact path="/shows" component={Shows} />
       <Route exact path="/showDetails/:id" component={ShowDetails} />
       <Route exact component={NotFound} />

@@ -1,11 +1,13 @@
+import {Component} from 'react'
 import './index.css'
 
-const ShowDetails = props => {
-  const {history} = props
-  const {params} = history
-  const {id} = params
-  console.log(id)
-  return <h1>fdsf</h1>
+class ShowDetails extends Component {
+  render() {
+    const {match} = this.props
+    const {params} = match
+    const {id} = params
+    return <h1>{id}</h1>
+  }
 }
 
 export default ShowDetails
