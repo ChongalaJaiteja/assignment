@@ -1,7 +1,7 @@
-import MoneyManager from './components/MoneyManager'
+import Shows from './components/Shows'
 
 import './App.css'
 
-const App = () => <MoneyManager />
+const App = () => <Shows />
 
 export default App
